@@ -12,12 +12,12 @@ app.use(cors({
 }));
 
 app.get('/', function (req, res) {
-    res.send('Hello World!');
-  });
+  res.send('Hello World!');
+});
 
-  // include API key from front end app
+// include API key from front end app
 app.post('/api/ask', ensureCorrectApiKey, async (req, res) => {
-// app.post('/api/ask', async (req, res) => {
+  // app.post('/api/ask', async (req, res) => {
   const { question, context } = req.body;
 
   const data = {
