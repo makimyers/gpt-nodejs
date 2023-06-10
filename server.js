@@ -3,7 +3,6 @@ const cors = require('cors');
 const app = express();
 const axios = require('axios');
 require('dotenv').config();
-
 app.use(express.json());
 
 // allow local front end to access
@@ -49,7 +48,6 @@ app.post('/api/ask', ensureCorrectApiKey, async (req, res) => {
 });
 
 const port = process.env.PORT || 4000;
-
 app.listen(port, () => console.log(`Server running on port ${port}`));
 
 function ensureCorrectApiKey(req, res, next) {
